@@ -23,7 +23,7 @@ else {
 console.log(result);
 
 
-//qn.no 2 answer this rest countries url v3 (in task qn doesn't work)
+//qn.no 2 answer this rest countries url v2
 const getBlogs = () => {
     const xhr = new XMLHttpRequest();
     xhr.open("GET", "https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json");
@@ -32,7 +32,7 @@ const getBlogs = () => {
         console.log(xhr.response);
         const blogs = xhr.response;
         for(let blog of blogs){
-            //print capital only
+            //print flag only
             console.log(blog["flag"]);
             
         }
@@ -44,7 +44,7 @@ getBlogs();
 
 
 
-//qn.no 3 answer this rest countries url v3 (in task qn doesn't work)
+//qn.no 3 answer this rest countries url v2
 const getBlogs1 = () => {
     const xhr = new XMLHttpRequest();
     xhr.open("GET", "https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json");
@@ -54,7 +54,7 @@ const getBlogs1 = () => {
         const blogs1 = xhr.response;
         for(let blog1 of blogs1){
            
-            //print region, subregion,independent
+            //print name, region, subregion,population
             console.log("name:"+ blog1["name"], "region:" + blog1["region"], "subregion:" + blog1["subregion"], "population:" + blog1["population"]);
         }
     };
