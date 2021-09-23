@@ -26,14 +26,14 @@ console.log(result);
 //qn.no 2 answer this rest countries url v3 (in task qn doesn't work)
 const getBlogs = () => {
     const xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://restcountries.com/v3/all");
+    xhr.open("GET", "https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json");
     xhr.responseType = "json";
     xhr.onload = () => {
         console.log(xhr.response);
         const blogs = xhr.response;
         for(let blog of blogs){
             //print capital only
-            console.log("capital:" + blog["capital"]);
+            console.log(blog["flag"]);
             
         }
     };
@@ -47,7 +47,7 @@ getBlogs();
 //qn.no 3 answer this rest countries url v3 (in task qn doesn't work)
 const getBlogs1 = () => {
     const xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://restcountries.com/v3/all");
+    xhr.open("GET", "https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json");
     xhr.responseType = "json";
     xhr.onload = () => {
         console.log(xhr.response);
@@ -55,7 +55,7 @@ const getBlogs1 = () => {
         for(let blog1 of blogs1){
            
             //print region, subregion,independent
-            console.log("region:" + blog1["region"],",subregion:" + blog1["subregion"],",independent:" + blog1["independent"]);
+            console.log("name:"+ blog1["name"], "region:" + blog1["region"], "subregion:" + blog1["subregion"], "population:" + blog1["population"]);
         }
     };
         xhr.send();
